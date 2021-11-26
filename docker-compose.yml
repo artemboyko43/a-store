@@ -1,0 +1,22 @@
+version: '3.7'
+  
+services:
+  # Angular
+  frontend:
+    build:
+      context: ./frontend
+      target: development
+      args:
+        UID: '1000'
+        GID: '1000'
+    command: npm run start
+    volumes:
+      - ./frontend:/srv/app
+#      - frontend_node_modules:/srv/app/node_modules
+    ports:
+        - '4200:4200'
+        # Port for jsonwebser, for development purpose.
+        - '3500:3500'
+
+#volumes:
+#  frontend_node_modules:
