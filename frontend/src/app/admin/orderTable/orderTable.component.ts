@@ -1,6 +1,6 @@
 import { Component } from "@angular/core";
-import { Order } from "../model/order.model";
-import { OrderRepository } from "../model/order.repository";
+import { Order } from "../../model/order.model";
+import { OrderRepository } from "../../model/order.repository";
 
 @Component({
     moduleId: module.id,
